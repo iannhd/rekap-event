@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+  <div class="main-container d-flex">
+    <div class="sidebar" id="side_nav">
+        <div class="header-box px-2 pt-3 pb-4 d-flex justify-content-between">
+          <h1 class="fs-4">
+            <span class="bg-white text-dark rounded shadow px-2 me-2">RE</span> <span class="h6 text-white">Rekap Event</span>
+          </h1>
+          <button class="btn d-md-none d-block close-btn px-1 py-0 text-white">
+            <i class="fas fa-stream"></i>
+          </button>
+        </div>
+        <ul class="list-unstyled px-2">
+          <li class="active"><a href="" class="text-decoration-none px-3 py-3 d-block"><i class="fas fa-home"></i> Dashboard</a></li>
+          <li class=""><a href="" class="text-decoration-none px-3 py-3 d-block"><i class="fas fa-list"></i> Projects</a></li>
+          <li class=""><a href="" class="text-decoration-none px-3 py-3 d-block d-flex justify-content-between">
+            <span><i class="fas fa-comment"></i> Messsages</span>
+            <span class="bg-dark rounded-pill text-white py-0 px-2">2</span>
+          </a></li>
+          <li class=""><a href="" class="text-decoration-none px-3 py-3 d-block"><i class="fas fa-envelope"></i> Services</a></li>
+          <li class=""><a href="" class="text-decoration-none px-3 py-3 d-block"><i class="fas fa-users"></i> Customers</a></li>
+        </ul>
+        <hr class="h-color mx-3">
+        <ul class="list-unstyled">
+          <li class=""><a href="" class="text-decoration-none px-3 py-3 d-block">
+            <i class="fas fa-bars"></i> Settings
+          </a></li>
+          <li class=""><a href="" class="text-decoration-none px-3 py-3 d-block"><i class="fas fa-bell"></i> Notifications</a></li>
+        </ul>
+    </div>
+    <div class="content">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid ">
+          <div class="d-flex justify-content-between d-md-none d-block">
+            <a class="navbar-brand fs-4" href="#">Rekap Event</a>
+            <button class="btn px-1 py-0 open-btn"><i class="fas fa-stream"></i></button>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="dashboard-content px-3 pt-4">
+        <h2 class="fs-4">Dashboard</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, distinctio reiciendis libero voluptates maiores nisi dolorem maxime eius sunt ut corporis facere autem totam non sapiente harum vel ipsum delectus?</p>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+
+    <script>
+     $(".sidebar ul li").on('click', function() {
+      $(".sidebar ul li.active").removeClass('active')
+      $(this).addClass('active');
+      
+     
+     })
+
+     $('.open-btn').on('click', function(){
+        $('.sidebar').addClass('active')
+        $('.dashboard-content').addClass('active')
+      })
+
+      $('.close-btn').on('click', function(){
+        $('.sidebar').removeClass('active')
+        $('.dashboard-content').removeClass('active')
+      })
+    </script>
+</body> 
+</html>
